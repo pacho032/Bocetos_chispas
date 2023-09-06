@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Boceto Parallax</title>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Donaciones</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nesciunt quisquam accusamus.
+            Aspernatur iusto aliquid beatae amet mollitia sint eligendi quisquam facilis, illo aperiam, magnam laudantium! Velit maxime nobis tempore!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nihil earum ea vitae maxime. Quam atque id labore quia ullam magnam quidem laborum asperiores. Suscipit quam nam eum tempora eaque.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio iure tempora ratione error itaque omnis at eius molestias. Accusamus explicabo ipsum tempore facilis impedit. Magnam, debitis magni maxime veniam
+            reprehenderit, molestias assumenda corporis incidunt asperiores iusto repellat? Nemo obcaecati possimus corporis distinctio animi, alias ullam quisquam incidunt ipsa earum doloribus. Veritatis amet accusamus 
+            quis dolorem sapiente, corporis voluptatibus placeat dolores quibusdam? Doloribus eos tenetur obcaecati delectus modi? Perferendis amet neque ullam optio. <br>
+            Iusto facere quisquam eligendi ipsam, distinctio tenetur vel tempore reprehenderit officiis. Commodi libero nam, vel reprehenderit omnis qui quae cumque veritatis sunt culpa, repellendus repellat quis fuga itaque
+            consequatur soluta debitis natus vero at sint ipsum. Et eligendi voluptate rerum adipisci culpa delectus quam perferendis non quis, sapiente facilis atque natus cumque id debitis corporis iste placeat odit! <br>
+            Enim sed doloribus non quod qui explicabo eaque illo quas temporibus, odio porro! Ullam consectetur itaque, recusandae fugit illum beatae harum, qui facere eos iure optio suscipit laborum atque consequuntur eum,
+            voluptas asperiores quaerat temporibus eius adipisci! Ipsa cum corporis officia dolorem rerum repellendus, perspiciatis, quis sunt voluptas veritatis quod labore dolore eaque impedit modi consequatur aut nesciunt
+            deleniti. Quas, maxime praesentium nostrum, architecto expedita perspiciatis laboriosam et nemo quae ullam labore? Velit vitae cum reprehenderit quas repellat perspiciatis nulla officia, illum similique labore
+            unde harum deserunt soluta est voluptas rem alias fugit ipsum, eaque qui libero! Rem, suscipit. Illum autem nemo laborum quaerat aliquam, cum perferendis?<br> Illum, magni porro voluptates debitis illo quisquam
+            molestiae, vitae cumque sed odit temporibus nobis tenetur velit esse pariatur vero aliquam possimus nulla, molestias deserunt! Nisi numquam at sapiente quod rerum vel ducimus a, doloribus rem ut non illo
+            repudiandae. Dolorem temporibus odit recusandae deleniti. Voluptas vero voluptatem ut optio, temporibus sunt voluptatibus iure iusto magni hic, veniam omnis, id asperiores quam autem nesciunt!
+
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value*0.5 + 'px';
+        })
+
+
+    </script>
+</body>
+</html>
